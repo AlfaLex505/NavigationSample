@@ -51,8 +51,9 @@ android {
 
 dependencies {
 
-    val nav_version = "2.7.4"
-    implementation("androidx.navigation:navigation-compose-android:$nav_version")
+    implementation("androidx.navigation:navigation-compose:2.8.8")
+//    val nav_version = "2.7.4"
+//    implementation("androidx.navigation:navigation-compose-android:$nav_version")
 
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
