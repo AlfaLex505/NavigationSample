@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    FirstScreen()
+                    MyApp()
                 }
             }
         }
@@ -48,7 +48,17 @@ class MainActivity : ComponentActivity() {
 fun MyApp(){
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "firstscreen"){
-        composable("firstscreen"){}
-        composable("secondscreen"){}
+
+        composable("firstscreen"){
+            FirstScreen {
+                navController.navigate("secondscreen")
+            }
+        }
+
+        composable("secondscreen"){
+            SecondScreen {
+                navController.navigate("firstscreen")
+            }
+        }
     }
 }
