@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun SecondScreen(navigateToFirstScreen:()->Unit){
+fun SecondScreen(navigateToThirdScreen:() -> Unit){
 
 
 //    Adding a column
@@ -28,14 +28,18 @@ fun SecondScreen(navigateToFirstScreen:()->Unit){
         Text("Welcome!", fontSize = 24.sp)
 
 //        Adding a button
-        Button(onClick = { navigateToFirstScreen() }) {
+        Button(onClick = { navigateToThirdScreen() }) {
             Text("Go to the first screen!")
         }
 
+//        Button(onClick = { navigateToFirstScreen() }) {
+//            Text("Go to the third screen!")
+//        }
 
     }
-
 }
+
+
 
 @Preview(showBackground = true)
 @Composable
