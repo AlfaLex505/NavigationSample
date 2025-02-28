@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun SecondScreen(){
+fun SecondScreen(navigateToFirstScreen:()->Unit){
 
 
 //    Adding a column
@@ -28,7 +28,7 @@ fun SecondScreen(){
         Text("Welcome!", fontSize = 24.sp)
 
 //        Adding a button
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = { navigateToFirstScreen() }) {
             Text("Go to the first screen!")
         }
 
@@ -40,5 +40,5 @@ fun SecondScreen(){
 @Preview(showBackground = true)
 @Composable
 fun SecondPreview(){
-    SecondScreen()
+    SecondScreen({})
 }
